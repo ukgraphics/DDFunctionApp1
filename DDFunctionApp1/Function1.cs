@@ -16,7 +16,7 @@ namespace DDFunctionApp1
         [FunctionName("Function1")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
-            [Blob("templete/SimpleInvoiceJP.xlsx", FileAccess.Read, Connection = "AzureWebJobsStorage")]Stream inputBlob,
+            [Blob("template/SimpleInvoiceJP.xlsx", FileAccess.Read, Connection = "AzureWebJobsStorage")]Stream inputBlob,
             [Blob("output/ResultInvoiceJP.xlsx", FileAccess.Write, Connection = "AzureWebJobsStorage")] Stream outxlsxBlob,
             [Blob("output/ResultInvoiceJP.pdf", FileAccess.Write, Connection = "AzureWebJobsStorage")] Stream outpdfBlob,
             ILogger log)
