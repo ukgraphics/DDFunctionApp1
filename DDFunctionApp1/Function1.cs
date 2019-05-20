@@ -72,11 +72,11 @@ namespace DDFunctionApp1
                 for (int i = 0; i < data.customer.detail.Length; i++)
                 {
                     var this_item = i * lines_mun;
-                    worksheet.Range[dt_init_row + this_item, 0].Value = (string)data.customer.detail[i].sku;
-                    worksheet.Range[(dt_init_row + 1) + this_item, 0].Value = data.customer.detail[i].name;
-                    worksheet.Range[dt_init_row + this_item, 4].Value = data.customer.detail[i].price;
-                    worksheet.Range[dt_init_row + this_item, 5].Value = data.customer.detail[i].unit;
-                    worksheet.Range[dt_init_row + this_item, 7].Value = data.customer.detail[i].remark;
+                    worksheet.Range[dt_init_row + this_item, 0].Value = (string)data.customer.detail[i].sku; //商品番号
+                    worksheet.Range[(dt_init_row + 1) + this_item, 0].Value = data.customer.detail[i].name; //商品名
+                    worksheet.Range[dt_init_row + this_item, 4].Value = data.customer.detail[i].price; //単価
+                    worksheet.Range[dt_init_row + this_item, 5].Value = data.customer.detail[i].unit; //数量
+                    worksheet.Range[dt_init_row + this_item, 7].Value = data.customer.detail[i].remark; //備考
                 }
 
                 //Excelファイルに保存
