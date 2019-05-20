@@ -51,7 +51,7 @@ namespace DDFunctionApp1
                            + "-" + ticks.Substring(ticks.Length - 4, 4);  //“`•[”Ô†
                 worksheet.Range["I3"].Value = data.publisher.representative; //’S“–Ò
                 worksheet.Range["G8"].Value = data.publisher.companyname; //”­sŒ³
-                worksheet.Range["G9"].Value = "§" + data.publisher.postalcode;  //—X•Ö”Ô†
+                worksheet.Range["G9"].Value = "§" + data.publisher.postalcode; //—X•Ö”Ô†
                 worksheet.Range["G10"].Value = data.publisher.address1 + data.publisher.address2; //Šİ’n
                 worksheet.Range["H12"].Value = data.publisher.tel;//“d˜b”Ô†
                 worksheet.Range["G13"].Value = data.publisher.bankname; //‹âs–¼
@@ -59,11 +59,11 @@ namespace DDFunctionApp1
                 worksheet.Range["H14"].Value = data.publisher.account; //ŒûÀ”Ô† 
 
                 //ŒÚ‹qî•ñ‚ğƒZƒ‹‚Éw’è
-                worksheet.Range["A3"].Value = "§" + data.customer.postalcode;
-                worksheet.Range["A4"].Value = data.customer.address1;
-                worksheet.Range["A5"].Value = data.customer.address2;
-                worksheet.Range["A6"].Value = data.customer.companyname;
-                worksheet.Range["A8"].Value = data.customer.name;
+                worksheet.Range["A3"].Value = "§" + data.customer.postalcode; //—X•Ö”Ô†
+                worksheet.Range["A4"].Value = data.customer.address1; //ZŠ1
+                worksheet.Range["A5"].Value = data.customer.address2; //ZŠ2
+                worksheet.Range["A6"].Value = data.customer.companyname; //‰ïĞ–¼
+                worksheet.Range["A8"].Value = data.customer.name; //–¼
 
                 //–¾×‚ÌŠJnˆÊ’u‚ğw’è
                 var dt_init_row = 17;

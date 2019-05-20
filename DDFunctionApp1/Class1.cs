@@ -11,6 +11,7 @@ namespace DDFunctionApp1
         public Customer customer { get; set; }
     }
 
+    //発行元情報
     public class Publisher
     {
         public string companyname { get; set; }
@@ -24,6 +25,7 @@ namespace DDFunctionApp1
         public string representative { get; set; }
     }
 
+    //顧客情報
     public class Customer
     {
         public string companyname { get; set; }
@@ -35,6 +37,7 @@ namespace DDFunctionApp1
         public Detail[] detail { get; set; }
     }
 
+    //明細
     public class Detail
     {
         public string sku { get; set; }
