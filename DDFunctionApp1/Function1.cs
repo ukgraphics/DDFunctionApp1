@@ -44,7 +44,6 @@ namespace DDFunctionApp1
                 var worksheet = workbook.ActiveSheet;
 
                 //発行元情報をセルに指定
-                //worksheet.Range["I1"].Value = DateTime.Now.ToLongDateString(); //発行日
                 CultureInfo culture = new CultureInfo("ja-JP");
                 worksheet.Range["I1"].Value = DateTime.Now.ToString("D", culture); //発行日
                 var ticks = DateTime.Now.Ticks.ToString();
