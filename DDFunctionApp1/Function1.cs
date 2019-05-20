@@ -6,6 +6,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
+using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -29,7 +30,7 @@ namespace DDFunctionApp1
                 return new BadRequestObjectResult("Please pass a data in the request body");
             else
             {
-                // トライアル用
+                //トライアル用
                 string key = System.Environment.GetEnvironmentVariable("DdExcelLicenseString", EnvironmentVariableTarget.Process);
                 Workbook.SetLicenseKey(key);
 
@@ -43,7 +44,9 @@ namespace DDFunctionApp1
                 var worksheet = workbook.ActiveSheet;
 
                 //発行元情報をセルに指定
-                worksheet.Range["I1"].Value = DateTime.Now.ToLongDateString(); //発行日
+                //worksheet.Range["I1"].Value = DateTime.Now.ToLongDateString(); //発行日
+                CultureInfo culture = new CultureInfo("ja-JP");
+                worksheet.Range["I1"].Value = DateTime.Now.ToString("D", culture); //発行日
                 var ticks = DateTime.Now.Ticks.ToString();
                 worksheet.Range["H3"].Value = DateTime.Now.Day.ToString("00")
                            + "-" + ticks.Substring(ticks.Length - 4, 4);  //伝票番号
