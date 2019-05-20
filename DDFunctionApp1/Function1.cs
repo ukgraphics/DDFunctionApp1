@@ -9,6 +9,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
+
 namespace DDFunctionApp1
 {
     public static class Function1
@@ -28,6 +29,10 @@ namespace DDFunctionApp1
                 return new BadRequestObjectResult("Please pass a data in the request body");
             else
             {
+                // トライアル用
+                string key = System.Environment.GetEnvironmentVariable("DdExcelLicenseString", EnvironmentVariableTarget.Process);
+                Workbook.SetLicenseKey(key);
+
                 //新しいワークブックを生成
                 var workbook = new GrapeCity.Documents.Excel.Workbook();
 
