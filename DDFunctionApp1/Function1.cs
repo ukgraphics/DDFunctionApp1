@@ -10,7 +10,6 @@ using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
 
-
 namespace DDFunctionApp1
 {
     public static class Function1
