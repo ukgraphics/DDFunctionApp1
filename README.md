@@ -1,2 +1,2 @@
 # DDFunctionApp1
-DioDocs + Azure Functions + Azure Storage
+DioDocs + Azure Functions + Azure Storage.
